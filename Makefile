@@ -2,12 +2,12 @@ all: build push
 test: build pushtest
 
 build:
-	docker build -t jcderr/concourse-kubernetes-resource:local .
+	docker build -t xodio/concourse-kubernetes-resource:local .
 
 push:
-	docker tag jcderr/concourse-kubernetes-resource:local jcderr/concourse-kubernetes-resource:latest
-	docker push jcderr/concourse-kubernetes-resource:latest
+	docker tag xodio/concourse-kubernetes-resource:local xodio/concourse-kubernetes-resource:latest
+	docker push xodio/concourse-kubernetes-resource:latest
 
 pushtest:
-	docker tag jcderr/concourse-kubernetes-resource:local jcderr/concourse-kubernetes-resource:test
-	docker push jcderr/concourse-kubernetes-resource:test
+	docker tag xodio/concourse-kubernetes-resource:local xodio/concourse-kubernetes-resource:test
+	docker push xodio/concourse-kubernetes-resource:test
